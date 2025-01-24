@@ -1,20 +1,18 @@
-// import "./App.css"
-import Chatbot from "react-chatbot-kit";
-
 import config from "./chatbot/config";
 import MessageParser from "./chatbot/MessageParser";
 import ActionProvider from "./chatbot/ActionProvider";
+import Chatbot from "react-chatbot-kit";
 import 'react-chatbot-kit/build/main.css';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Chatbot
         config={config}
         messageParser={MessageParser}
         actionProvider={ActionProvider}
       />
-      <button className="repo" onClick={handleDomActions}>Create a Repo</button>
     </div>
   );
 }

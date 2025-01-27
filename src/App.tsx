@@ -17,7 +17,7 @@ function App() {
   );
 }
 
-function sendMessageToContentScript(action: string) {
+export function sendMessageToContentScript(action: string) {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     if (tabs[0]?.id) {
       console.log("Sending message to content script:", { action });
